@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Película</title>
+</head>
+
+<body>
+
+    <h2>Editar Película</h2>
+
+    <form id="editarPeliculaForm" method="post">
+        {% csrf_token %}
+        <input type="hidden" id="pelicula-id" name="pelicula_id">
+        <div>
+            <label for="titulo-editar">Título:</label>
+            <input type="text" id="titulo-editar" name="titulo" required>
+        </div>
+        <div>
+            <label for="sinopsis-editar">Sinopsis:</label>
+            <textarea id="sinopsis-editar" name="sinopsis" required></textarea>
+        </div>
+        <div>
+            <label for="duracion-editar">Duración:</label>
+            <input type="text" id="duracion-editar" name="duracion" required>
+        </div>
+        <div>
+            <label for="genero-editar">Género:</label>
+            <input type="text" id="genero-editar" name="genero" required>
+        </div>
+        <div>
+            <label for="estado-editar">Estado:</label>
+            <input type="text" id="estado-editar" name="estado" required>
+        </div>
+        <div>
+            <label for="imagen-editar">Imagen:</label>
+            <input type="file" id="imagen-editar" name="imagen" required>
+        </div>
+        <div>
+            <label for="precio-editar">Precio:</label>
+            <input type="number" id="precio-editar" name="precio" required>
+        </div>
+        <button type="submit">Guardar Cambios</button>
+    </form>
+
+</body>
+
+</html>
